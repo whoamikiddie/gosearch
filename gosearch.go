@@ -134,7 +134,7 @@ func UnmarshalJSON() (Data, error) {
 		return Data{}, fmt.Errorf("error deleting old data.json: %w", err)
 	}
 
-	url := ""
+	url := "https://raw.githubusercontent.com/whoamikiddie/gosearch/refs/heads/main/data.json"
 	resp, err := http.Get(url)
 	if err != nil {
 		return Data{}, fmt.Errorf("error downloading data.json: %w", err)
